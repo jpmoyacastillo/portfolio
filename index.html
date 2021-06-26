@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- LINKEDIN SEO -->
+    <meta name="title" property="og:title" content="Hola 👋 soy JP!">
+    <meta name="image" property="og:image" content="img/carozzi-photo2.jpg">
+    <meta name="description" property="og:description" content="Portafolio Juan Pablo Moya Castillo">
+    <title>JP Moya Castillo | Portfolio</title>
+    <link rel="shortcut icon" href="./img/arbol.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+    <!-- <link rel="stylesheet" href="styles/debug.css"> -->
+  </head>
+  <style>
+            
+    /* general*/
+    .center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* navbar */
+    .navbar-item img {
+        max-height: 4rem;
+        border-radius: 20%;
+    }
+
+    .navbar .navbar-burger {
+      top: 15px;
+      right: 15px;
+    }
+        
+    </style>
+  <body>
+  <!-- navbar -->
+  <nav class="navbar is-light is-spaced" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+        <a class="navbar-item" href="https://about.me/moyacastillo">
+          <img src="img/profile-photo-small.jpg">
+        </a>
+        <div class="center">
+          <p>
+              <a class="navbar-item" href="https://about.me/moyacastillo">JP Moya</a>
+          </p>
+        </div>
+    
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        </a>
+    </div>
+    
+    <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-end">
+          <a class="navbar-item">
+              Home
+          </a>
+
+          <a class="navbar-item">
+              Useful
+          </a>
+
+          <a class="navbar-item">
+              Projects
+          </a>
+
+          <a class="navbar-item">
+            <span class="icon-text has-text-info">
+                <span class="icon">
+                    <i class="fas fa-language"></i>
+                </span>
+                <span>Translate</span>
+            </span>
+          </a>
+        </div>
+    </div>
+  </nav>
+<!-- /navbar -->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    // Get all "navbar-burger" elements
+    const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+    // Check if there are any navbar burgers
+    if ($navbarBurgers.length > 0) {
+        // Add a click event on each of them
+        $navbarBurgers.forEach( el => {
+            el.addEventListener('click', () => {
+            // Get the target from the "data-target" attribute
+                const target = el.dataset.target;
+                const $target = document.getElementById(target);
+
+                // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+                el.classList.toggle('is-active');
+                $target.classList.toggle('is-active');
+
+            });
+        });
+    }
+});
+</script>  
+</body>
+</html>
