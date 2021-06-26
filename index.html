@@ -18,6 +18,10 @@
   <style>
             
     /* general*/
+    .navbar {
+      font-family: 'Baloo 2', cursive, Arial, sans-serif;
+      font-size: 18px;
+    }
     .center {
         display: flex;
         justify-content: center;
@@ -43,11 +47,7 @@
         <a class="navbar-item" href="https://about.me/moyacastillo">
           <img src="img/profile-photo-small.jpg">
         </a>
-        <div class="center">
-          <p>
-              <a class="navbar-item" href="https://about.me/moyacastillo">JP Moya</a>
-          </p>
-        </div>
+        
     
         <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
         <span aria-hidden="true"></span>
@@ -57,31 +57,49 @@
     </div>
     
     <div id="navbarBasicExample" class="navbar-menu">
-        <div class="navbar-end">
-          <a class="navbar-item">
-              Home
-          </a>
+      <!-- <div class="navbar-start center">
+        <p class="navbar-item">
+            <a href="https://about.me/moyacastillo">JP Moya</a>
+        </p>
+      </div> -->
+      <div class="navbar-end">
+        <a class="navbar-item">
+            Home
+        </a>
 
-          <a class="navbar-item">
-              Useful
-          </a>
+        <a class="navbar-item">
+            Useful
+        </a>
 
-          <a class="navbar-item">
-              Projects
-          </a>
+        <a class="navbar-item">
+            Projects
+        </a>
 
-          <a class="navbar-item">
-            <span class="icon-text has-text-info">
-                <span class="icon">
-                    <i class="fas fa-language"></i>
-                </span>
-                <span>Translate</span>
-            </span>
-          </a>
-        </div>
+        <a class="navbar-item">
+          <span class="icon-text has-text-info">
+              <span class="icon">
+                  <i class="fas fa-language"></i>
+              </span>
+              <span>Translate</span>
+          </span>
+        </a>
+      </div>
     </div>
   </nav>
-<!-- /navbar -->
+  <!-- /navbar -->
+
+  <!-- hero -->
+  <section class="hero">
+    <div class="hero-body">
+      <div class="content">
+        <h1>Hello 👋🏼 I'm Juan Pablo</h1>
+        <p> I currently live in Hilversum, the Netherlands. <br> My interests range from sustainability to technology. I also study on innovation, entrepreneurship and social impact.</p>
+      </div>
+    </div>
+  </section>
+  <!-- hero -->
+
+
 <script>
 document.addEventListener('DOMContentLoaded', () => {
     // Get all "navbar-burger" elements
