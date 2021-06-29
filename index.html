@@ -18,17 +18,23 @@
   <style>
             
     /* general*/
-    .navbar {
-      font-family: 'Baloo 2', cursive, Arial, sans-serif;
-      font-size: 18px;
-    }
     .center {
         display: flex;
         justify-content: center;
         align-items: center;
     }
-
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, 250px);
+      gap: 5px;
+      justify-content: center;
+    }
+    
     /* navbar */
+    .navbar {
+      font-family: 'Baloo 2', cursive, Arial, sans-serif;
+      font-size: 18px;
+    }
     .navbar-item img {
         max-height: 4rem;
         border-radius: 20%;
@@ -102,9 +108,9 @@
         <!-- hero -->
 
         <!-- useful -->
-        <section class="section">
-          <div class="container">
-            <h2 class="subtitle is-3 has-text-centered">Useful 🔗</h2>
+        <h2 class="subtitle is-3 has-text-centered">Useful 🔗</h2>
+        <section class="section is-paddingless">
+          <div class="container grid">
 
             <div class="card m-4">
               <div class="card-content">
@@ -141,6 +147,21 @@
                       <li>
                           <a href="http://mycolor.space">My Color</a>
                       </li>
+                    </ol>
+                </div>
+              </div>
+            </div>
+
+            <div class="card m-4">
+              <div class="card-content">
+                <div class="content">
+                  <h3>Editores de código</h3>
+                    <ol>
+                        <li>Visual Studio Code [VS Code]</li>
+                        <li>Sublime Text</li>
+                        <li>Atom</li>
+                        <li>Brackets</li>
+                        <li>Vim</li>
                     </ol>
                 </div>
               </div>
