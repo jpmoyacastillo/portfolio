@@ -47,6 +47,41 @@
       gap: 6rem;
       justify-content: center;
     }
+    .read-more-state {
+      display: none;
+    }
+
+    .read-more-target {
+      opacity: 0;
+      max-height: 0;
+      font-size: 0;
+      transition: .25s ease;
+    }
+
+    .read-more-state:checked ~ .read-more-wrap .read-more-target {
+      opacity: 1;
+      font-size: inherit;
+      max-height: 999em;
+    }
+
+    .read-more-state ~ .read-more-trigger:before {
+      content: 'Show more';
+    }
+
+    .read-more-state:checked ~ .read-more-trigger:before {
+      content: 'Show less';
+    }
+
+    .read-more-trigger {
+      cursor: pointer;
+      display: inline-block;
+      padding: 0 .5em;
+      color: #666;
+      font-size: .9em;
+      line-height: 2;
+      border: 1px solid #ddd;
+      border-radius: .25em;
+    }
     /* general*/
     
     /* navbar */
@@ -75,51 +110,51 @@
   </style>
   <body>
         <!-- navbar -->
-          <nav class="navbar has-background-white-ter" role="navigation" aria-label="main navigation">
-            <div class="container">
-              <div class="navbar-brand">
-                  <a target=”_blank” class="navbar-item" href="https://about.me/moyacastillo">
-                    <img src="img/profile-photo-small.jpg">
-                  </a>
-                  
-                  <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-                  <span aria-hidden="true"></span>
-                  <span aria-hidden="true"></span>
-                  <span aria-hidden="true"></span>
-                  </a>
-              </div>
-              
-              <div id="navbarBasicExample" class="navbar-menu">
-                <!-- <div class="navbar-start center">
-                  <p class="navbar-item">
-                      <a href="https://about.me/moyacastillo">JP Moya</a>
-                  </p>
-                </div> -->
-                <div class="navbar-end">
-                  <a href="#hero" class="navbar-item">
-                      Home
-                  </a>
-                  
-                  <a href="#projects" class="navbar-item">
-                      Projects
-                  </a>
+        <nav class="navbar has-background-white-ter" role="navigation" aria-label="main navigation">
+          <div class="container">
+            <div class="navbar-brand">
+                <a target=”_blank” class="navbar-item" href="https://about.me/moyacastillo">
+                  <img src="img/profile-photo-small.jpg">
+                </a>
+                
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                </a>
+            </div>
+            
+            <div id="navbarBasicExample" class="navbar-menu">
+              <!-- <div class="navbar-start center">
+                <p class="navbar-item">
+                    <a href="https://about.me/moyacastillo">JP Moya</a>
+                </p>
+              </div> -->
+              <div class="navbar-end">
+                <a href="#hero" class="navbar-item">
+                    Home
+                </a>
+                
+                <a href="#projects" class="navbar-item">
+                    Projects
+                </a>
 
-                  <a href="#useful" class="navbar-item">
-                      Useful
-                  </a>
-          
-                  <a href="https://jpmoyacastillo.github.io/portafolio/" class="navbar-item">
-                    <span class="icon-text has-text-info">
-                        <span class="icon">
-                            <i class="fas fa-language"></i>
-                        </span>
-                        <span>Traducir</span>
-                    </span>
-                  </a>
-                </div>
+                <a href="#useful" class="navbar-item">
+                    Useful
+                </a>
+        
+                <a href="https://jpmoyacastillo.github.io/portafolio/" class="navbar-item">
+                  <span class="icon-text has-text-info">
+                      <span class="icon">
+                          <i class="fas fa-language"></i>
+                      </span>
+                      <span>Traducir</span>
+                  </span>
+                </a>
               </div>
             </div>
-          </nav>
+          </div>
+        </nav>
         <!-- /navbar -->
 
         <!-- hero -->
@@ -137,153 +172,155 @@
         <!-- projects -->
         <section id="projects" class="section">
           <h2 class="subtitle is-3 has-text-centered pb-4">Projects 🧩</h2>
-          <div class="container is-fluid grid-projects">
-
-            <div class="card">
-              <div class="card-image">
-                <figure class="image is-4by3">
-                  <img src="img/bitha.png" alt="Bitha e-commerce">
-                </figure>
-              </div>
-
-              <div class="card-content">
-                <div class="content">
-                  Build the first e-commerce store.<br>Cooperation in the digital marketing strategy.<br><a href="https://www.bithatienda.cl" target="_blank">@bithatienda</a>
-                  <a href="#">#LocalDesign</a> <a href="#">#LocalManufacturing</a>
-                  <br>
-                  <time datetime="2016-1-1">2021 | Chile (remote)</time>
+            <div class="container read-more-wrap is-fluid grid-projects">
+              <input type="checkbox" class="read-more-state" id="post-1" />
+                <div class="card">
+                  <div class="card-image">
+                    <figure class="image is-4by3">
+                      <img src="img/bitha.png" alt="Bitha e-commerce">
+                    </figure>
+                  </div>
+    
+                  <div class="card-content">
+                    <div class="content">
+                      Build the first e-commerce store.<br>Cooperation in the digital marketing strategy.<br><a href="https://www.bithatienda.cl" target="_blank">@bithatienda</a>
+                      <a href="#">#LocalDesign</a> <a href="#">#LocalManufacturing</a>
+                      <br>
+                      <time datetime="2016-1-1">2021 | Chile (remote)</time>
+                    </div>
+                  </div>
+                
                 </div>
-              </div>
-            
-            </div>
-
-            <div class="card">
-              <div class="card-image">
-                <figure class="image is-4by3">
-                  <img src="img/eticolabora.png" alt="Eticolabora website">
-                </figure>
-              </div>
-
-              <div class="card-content">
-                <div class="content">
-                  Creation, design, and production of a landing page. <br>Generation of leads to transform them into contact points.<br><a href="https://www.eticolabora.org" target="_blank">@eticolabora</a>
-                  <a href="#">#SustainableDevelopment</a> <a href="#">#BusinessDevelopment</a>
-                  <br>
-                  <time datetime="2016-1-1">2020 - 2021 | Chile (remote)</time>
+    
+                <div class="card">
+                  <div class="card-image">
+                    <figure class="image is-4by3">
+                      <img src="img/eticolabora.png" alt="Eticolabora website">
+                    </figure>
+                  </div>
+    
+                  <div class="card-content">
+                    <div class="content">
+                      Creation, design, and production of a landing page. <br>Generation of leads to transform them into contact points.<br><a href="https://www.eticolabora.org" target="_blank">@eticolabora</a>
+                      <a href="#">#SustainableDevelopment</a> <a href="#">#BusinessDevelopment</a>
+                      <br>
+                      <time datetime="2016-1-1">2020 - 2021 | Chile (remote)</time>
+                    </div>
+                  </div>
+                
                 </div>
-              </div>
-            
-            </div>
-
-            <div class="card">
-              <div class="card-image">
-                <figure class="image is-4by3">
-                  <img src="img/hunkemoller.png" alt="Hunkemöller website">
-                </figure>
-              </div>
-
-              <div class="card-content">
-                <div class="content">
-                  Preparation of orders for stores throughout Europe. <br> Help in the value chain within the winery. Use of a computerized dispatch and storage system.<br><a href="https://www.hunkemoller.nl/" target="_blank">@hunkemöller</a>
-                  <a href="#">#EcommerceWarehousing</a> <a href="#">#Omnichannel</a>
-                  <br>
-                  <time datetime="2016-1-1">2020 - 2021 | Netherlands</time>
+    
+                <div class="card">
+                  <div class="card-image">
+                    <figure class="image is-4by3">
+                      <img src="img/hunkemoller.png" alt="Hunkemöller website">
+                    </figure>
+                  </div>
+    
+                  <div class="card-content">
+                    <div class="content">
+                      Preparation of orders for stores throughout Europe. <br> Help in the value chain within the winery. Use of a computerized dispatch and storage system.<br><a href="https://www.hunkemoller.nl/" target="_blank">@hunkemöller</a>
+                      <a href="#">#EcommerceWarehousing</a> <a href="#">#Omnichannel</a>
+                      <br>
+                      <time datetime="2016-1-1">2020 - 2021 | Netherlands</time>
+                    </div>
+                  </div>
+                
                 </div>
-              </div>
-            
-            </div>
-
-            <div class="card">
-              <div class="card-image">
-                <figure class="image is-4by3">
-                  <img src="https://www.logistiekprofs.nl/images/article/large/5e26f9e90ce81.jpg?version=1579612649" alt="AH Warehouse">
-                </figure>
-              </div>
-
-              <div class="card-content">
-                <div class="content">
-                  E-commerce warehousing. <br> Working with normal and frozen products. <br> Use of internal information system in order to maximize delivery of orders per day. In 2019 AH Online delivered 22 million boxes. <a href="https://www.logistiekprofs.nl/nieuws/albert-heijn-bezorgde-22-miljoen-kratten-in-2019" target="_blank">@AHOnline</a>
-                  <a href="#">#EcommerceWarehousing</a> <a href="#">#WarehouseManagementSystem</a>
-                  <br>
-                  <time datetime="2016-1-1">2019 - 2020 | Netherlands</time>
+    
+                <div class="card">
+                  <div class="card-image">
+                    <figure class="image is-4by3">
+                      <img src="https://www.logistiekprofs.nl/images/article/large/5e26f9e90ce81.jpg?version=1579612649" alt="AH Warehouse">
+                    </figure>
+                  </div>
+    
+                  <div class="card-content">
+                    <div class="content">
+                      E-commerce warehousing. <br> Working with normal and frozen products. <br> Use of internal information system in order to maximize delivery of orders per day. In 2019 AH Online delivered 22 million boxes. <a href="https://www.logistiekprofs.nl/nieuws/albert-heijn-bezorgde-22-miljoen-kratten-in-2019" target="_blank">@AHOnline</a>
+                      <a href="#">#EcommerceWarehousing</a> <a href="#">#WarehouseManagementSystem</a>
+                      <br>
+                      <time datetime="2016-1-1">2019 - 2020 | Netherlands</time>
+                    </div>
+                  </div>
+                
                 </div>
-              </div>
-            
-            </div>
-
-            <div class="card">
-              <div class="card-image">
-                <figure class="image is-4by3">
-                  <img src="img/uber.jpg" alt="JP as Delivery Partner">
-                </figure>
-              </div>
-
-              <div class="card-content">
-                <div class="content">
-                  Uber Eats Delivery Partner.<br><a href="https://www.uber.com/us/en/deliver/" target="_blank">@UberEats</a>
-                  <a href="#">#DeliveryPartner</a> <a href="#">#UberApp</a>
-                  <br>
-                  <time datetime="2016-1-1">2019 - 2020 | Netherlands</time>
+    
+                <div class="card read-more-target">
+                  <div class="card-image">
+                    <figure class="image is-4by3">
+                      <img src="img/uber.jpg" alt="JP as Delivery Partner">
+                    </figure>
+                  </div>
+    
+                  <div class="card-content">
+                    <div class="content">
+                      Uber Eats Delivery Partner.<br><a href="https://www.uber.com/us/en/deliver/" target="_blank">@UberEats</a>
+                      <a href="#">#DeliveryPartner</a> <a href="#">#UberApp</a>
+                      <br>
+                      <time datetime="2016-1-1">2019 - 2020 | Netherlands</time>
+                    </div>
+                  </div>
+                
                 </div>
-              </div>
-            
-            </div>
-
-            <div class="card">
-              <div class="card-image">
-                <figure class="image is-4by3">
-                  <img src="img/carozzi-photo2.jpg" alt="JP as Product Manager">
-                </figure>
-              </div>
-
-              <div class="card-content">
-                <div class="content">
-                  As Product Manager, in cooperation with the Brand Manager, plan, develop and innovate the strategy of 3 of the most important chocolate brands in Chile: Costa, Ambrosoli and Calaf. <br> Market leadership with around 150 products. <a href="https://www.carozzicorp.com/" target="_blank">@Carozzi</a>
-                  <a href="#">#Management</a> <a href="#">#Innovation</a>
-                  <br>
-                  <time datetime="2016-1-1">2017 - 2018 | Chile</time>
+    
+                <div class="card read-more-target">
+                  <div class="card-image">
+                    <figure class="image is-4by3">
+                      <img src="img/carozzi-photo2.jpg" alt="JP as Product Manager">
+                    </figure>
+                  </div>
+    
+                  <div class="card-content">
+                    <div class="content">
+                      As Product Manager, in cooperation with the Brand Manager, plan, develop and innovate the strategy of 3 of the most important chocolate brands in Chile: Costa, Ambrosoli and Calaf. <br> Market leadership with around 150 products. <a href="https://www.carozzicorp.com/" target="_blank">@Carozzi</a>
+                      <a href="#">#Management</a> <a href="#">#Innovation</a>
+                      <br>
+                      <time datetime="2016-1-1">2017 - 2018 | Chile</time>
+                    </div>
+                  </div>
+                
                 </div>
-              </div>
-            
-            </div>
-
-            <div class="card">
-              <div class="card-image">
-                <figure class="image is-4by3">
-                  <img src="img/peñalolen.jpg" alt="Final ceremony of the program">
-                </figure>
-              </div>
-
-              <div class="card-content">
-                <div class="content">
-                  Development of consultancies for the Government Program "Entrepreneurial Woman" to vulnerable beneficiaries of the Peñalolen commune. <br>  <a href="https://www.penalolen.cl/" target="_blank">@MunicipalityPeñalolen</a>
-                  <a href="#">#SMEs</a>
-                  <br>
-                  <time datetime="2016-1-1">2016  | Chile</time>
+    
+                <div class="card read-more-target">
+                  <div class="card-image">
+                    <figure class="image is-4by3">
+                      <img src="img/peñalolen.jpg" alt="Final ceremony of the program">
+                    </figure>
+                  </div>
+    
+                  <div class="card-content">
+                    <div class="content">
+                      Development of consultancies for the Government Program "Entrepreneurial Woman" to vulnerable beneficiaries of the Peñalolen commune. <br>  <a href="https://www.penalolen.cl/" target="_blank">@MunicipalityPeñalolen</a>
+                      <a href="#">#SMEs</a>
+                      <br>
+                      <time datetime="2016-1-1">2016  | Chile</time>
+                    </div>
+                  </div>
+                
                 </div>
-              </div>
-            
-            </div>
-
-            <div class="card">
-              <div class="card-image">
-                <figure class="image is-4by3">
-                  <img src="img/thesis-photo.jpg" alt="Photo buses in Grecia street">
-                </figure>
-              </div>
-
-              <div class="card-content">
-                <div class="content">
-                  Technical and economic analysis of Grecia Street as a BRT system (Bus Rapid Transit). <br> This project was incorporated into the implementation of buses and electrical terminals (in cooperation with Metbus, ByD and Enel Chile) in 2018. <br> <a href="https://brtdata.org/location/latin_america/chile/santiago/?lang=pt" target="_blank">@GreciaBRT</a>
-                  <a href="#">#SustainableMobility</a>
-                  <br>
-                  <time datetime="2016-1-1">2016  | Chile</time>
+    
+                <div class="card read-more-target">
+                  <div class="card-image">
+                    <figure class="image is-4by3">
+                      <img src="img/thesis-photo.jpg" alt="Photo buses in Grecia street">
+                    </figure>
+                  </div>
+    
+                  <div class="card-content">
+                    <div class="content">
+                      Technical and economic analysis of Grecia Street as a BRT system (Bus Rapid Transit). <br> This project was incorporated into the implementation of buses and electrical terminals (in cooperation with Metbus, ByD and Enel Chile) in 2018. <br> <a href="https://brtdata.org/location/latin_america/chile/santiago/?lang=pt" target="_blank">@GreciaBRT</a>
+                      <a href="#">#SustainableMobility</a>
+                      <br>
+                      <time datetime="2016-1-1">2016  | Chile</time>
+                    </div>
+                  </div>
+                
                 </div>
-              </div>
-            
-            </div>
+  
+              <label for="post-1" class="read-more-trigger"></label>
 
-          </div>
+            </div>
         </section>
         <!-- /projects -->
 
@@ -752,28 +789,28 @@
             <p><strong>© 2021 Juan Pablo Moya Castillo</strong></p>
           </div>
         </footer>
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-    // Get all "navbar-burger" elements
-    const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+        <script>
+          document.addEventListener('DOMContentLoaded', () => {
+            // Get all "navbar-burger" elements
+            const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
 
-    // Check if there are any navbar burgers
-    if ($navbarBurgers.length > 0) {
-        // Add a click event on each of them
-        $navbarBurgers.forEach( el => {
-            el.addEventListener('click', () => {
-            // Get the target from the "data-target" attribute
-                const target = el.dataset.target;
-                const $target = document.getElementById(target);
+            // Check if there are any navbar burgers
+            if ($navbarBurgers.length > 0) {
+                // Add a click event on each of them
+                $navbarBurgers.forEach( el => {
+                    el.addEventListener('click', () => {
+                    // Get the target from the "data-target" attribute
+                        const target = el.dataset.target;
+                        const $target = document.getElementById(target);
 
-                // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-                el.classList.toggle('is-active');
-                $target.classList.toggle('is-active');
+                        // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+                        el.classList.toggle('is-active');
+                        $target.classList.toggle('is-active');
 
-            });
+                    });
+                });
+            }
         });
-    }
-});
-</script>  
+        </script>  
   </body>
 </html>
