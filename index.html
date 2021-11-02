@@ -110,7 +110,7 @@
           </a>
 
           <a href="#projects" class="navbar-item">
-            Projects
+            Work
           </a>
 
           <a href="#useful" class="navbar-item">
@@ -153,7 +153,7 @@
 
   <!-- projects -->
   <section id="projects" class="section">
-    <h2 class="subtitle is-3 has-text-centered pb-4">Projects 🧩</h2>
+    <h2 class="subtitle is-3 has-text-centered pb-4">Work and Projects🧩</h2>
     <div class="container grid-projects">
       <div class="card">
         <div class="card-image">
@@ -325,11 +325,17 @@
   <!-- useful -->
   <div class="columns">
     <div class="column is-8 is-offset-2">
-      <h2 id="useful" class="subtitle is-3 has-text-centered pt-6">Useful 🔗</h2>
+      <h2 id="useful" class="subtitle is-3 has-text-centered pt-6 mb-1">Useful</h2>
+      <div class="filter-buttons center pb-1">
+        <button class="button m-3 is-info is-outlined" onclick="filterObjects('all')">📚 Show all</button>
+        <button class="button m-3 is-success is-outlined" onclick="filterObjects('code')">💻 Code</button>
+        <button class="button m-3 is-danger is-outlined" onclick="filterObjects('design')">🌈 Design</button>
+        <button class="button m-3 is-dark is-outlined" onclick="filterObjects('other')">🔎 Others</button>
+      </div>
       <section class="section is-paddingless">
         <div class="container grid-useful">
 
-          <div class="card">
+          <div class="card useful-box code">
             <div class="card-content">
               <div class="content">
                 <h3>Learning Platforms</h3>
@@ -363,7 +369,7 @@
             </div>
           </div>
 
-          <div class="card">
+          <div class="card useful-box code">
             <div class="card-content">
               <div class="content">
                 <h3>Code Editors</h3>
@@ -378,7 +384,7 @@
             </div>
           </div>
 
-          <div class="card">
+          <div class="card useful-box code">
             <div class="card-content">
               <div class="content">
                 <h3>Docs</h3>
@@ -400,7 +406,7 @@
             </div>
           </div>
 
-          <div class="card">
+          <div class="card useful-box code">
             <div class="card-content">
               <div class="content">
                 <h3>Youtube Channels</h3>
@@ -417,7 +423,7 @@
             </div>
           </div>
 
-          <div id="usefulToHide1" class="card is-hidden">
+          <div class="card useful-box code">
             <div class="card-content">
               <div class="content">
                 <h3>Podcasts</h3>
@@ -439,7 +445,7 @@
             </div>
           </div>
 
-          <div id="usefulToHide2" class="card is-hidden">
+          <div class="card useful-box code">
             <div class="card-content">
               <div class="content">
                 <h3>Coding Challenge Platforms</h3>
@@ -479,7 +485,7 @@
             </div>
           </div>
 
-          <div id="usefulToHide3" class="card is-hidden">
+          <div class="card useful-box other">
             <div class="card-content">
               <div class="content">
                 <h3>Free Hosting</h3>
@@ -516,7 +522,7 @@
             </div>
           </div>
 
-          <div id="usefulToHide4" class="card is-hidden">
+          <div class="card useful-box other">
             <div class="card-content">
               <div class="content">
                 <h3>Freelancing platforms</h3>
@@ -556,7 +562,7 @@
             </div>
           </div>
 
-          <div id="usefulToHide5" class="card is-hidden">
+          <div class="card useful-box other">
             <div class="card-content">
               <div class="content">
                 <h3>To find remote jobs</h3>
@@ -593,7 +599,7 @@
             </div>
           </div>
 
-          <div id="usefulToHide6" class="card is-hidden">
+          <div class="card useful-box design">
             <div class="card-content">
               <div class="content">
                 <h3>Color Palettes</h3>
@@ -618,7 +624,7 @@
             </div>
           </div>
 
-          <div id="usefulToHide7" class="card is-hidden">
+          <div class="card useful-box design">
             <div class="card-content">
               <div class="content">
                 <h3>Fonts</h3>
@@ -640,7 +646,7 @@
             </div>
           </div>
 
-          <div id="usefulToHide8" class="card is-hidden">
+          <div class="card useful-box design">
             <div class="card-content">
               <div class="content">
                 <h3>UI Inspiration</h3>
@@ -659,7 +665,7 @@
             </div>
           </div>
 
-          <div id="usefulToHide9" class="card is-hidden">
+          <div class="card useful-box design">
             <div class="card-content">
               <div class="content">
                 <h3>Open Photos</h3>
@@ -678,7 +684,7 @@
             </div>
           </div>
 
-          <div id="usefulToHide10" class="card is-hidden">
+          <div class="card useful-box design">
             <div class="card-content">
               <div class="content">
                 <h3>Icons</h3>
@@ -706,7 +712,7 @@
             </div>
           </div>
 
-          <div id="usefulToHide11" class="card is-hidden">
+          <div class="card useful-box design">
             <div class="card-content">
               <div class="content">
                 <h3>Illustrations</h3>
@@ -734,7 +740,7 @@
             </div>
           </div>
 
-          <div id="usefulToHide12" class="card is-hidden">
+          <div class="card useful-box design">
             <div class="card-content">
               <div class="content">
                 <h3>Animation Libraries</h3>
@@ -755,7 +761,7 @@
             </div>
           </div>
 
-          <div id="usefulToHide13" class="card is-hidden">
+          <div class="card useful-box other">
             <div class="card-content">
               <div class="content">
                 <h3>Extensions for Chrome</h3>
@@ -771,9 +777,10 @@
           </div>
 
         </div>
-        <div class="is-flex is-justify-content-center">
+
+        <!-- <div class="is-flex is-justify-content-center">
           <button id="moreUseful" class="button is-info mt-6">More</button>
-        </div>
+        </div> -->
       </section>
     </div>
   </div>
@@ -806,23 +813,23 @@
         $("#moreProjects").toggleClass("is-hidden");
       });
       //If the button is clicked, add the class is-hidden to the selected cards
-      $("#moreUseful").click(function () {
-        $("#usefulToHide1").toggleClass("is-hidden");
-        $("#usefulToHide2").toggleClass("is-hidden");
-        $("#usefulToHide3").toggleClass("is-hidden");
-        $("#usefulToHide4").toggleClass("is-hidden");
-        $("#usefulToHide5").toggleClass("is-hidden");
-        $("#usefulToHide6").toggleClass("is-hidden");
-        $("#usefulToHide7").toggleClass("is-hidden");
-        $("#usefulToHide8").toggleClass("is-hidden");
-        $("#usefulToHide9").toggleClass("is-hidden");
-        $("#usefulToHide10").toggleClass("is-hidden");
-        $("#usefulToHide11").toggleClass("is-hidden");
-        $("#usefulToHide12").toggleClass("is-hidden");
-        $("#usefulToHide13").toggleClass("is-hidden");
-        //To hide button after click
-        $("#moreUseful").toggleClass("is-hidden");
-      });
+      // $("#moreUseful").click(function () {
+      //   $("#usefulToHide1").toggleClass("is-hidden");
+      //   $("#usefulToHide2").toggleClass("is-hidden");
+      //   $("#usefulToHide3").toggleClass("is-hidden");
+      //   $("#usefulToHide4").toggleClass("is-hidden");
+      //   $("#usefulToHide5").toggleClass("is-hidden");
+      //   $("#usefulToHide6").toggleClass("is-hidden");
+      //   $("#usefulToHide7").toggleClass("is-hidden");
+      //   $("#usefulToHide8").toggleClass("is-hidden");
+      //   $("#usefulToHide9").toggleClass("is-hidden");
+      //   $("#usefulToHide10").toggleClass("is-hidden");
+      //   $("#usefulToHide11").toggleClass("is-hidden");
+      //   $("#usefulToHide12").toggleClass("is-hidden");
+      //   $("#usefulToHide13").toggleClass("is-hidden");
+      //   //To hide button after click
+      //   $("#moreUseful").toggleClass("is-hidden");
+      // });
     });
   </script>
   <script>
@@ -848,6 +855,7 @@
       }
     });
   </script>
+  <script src="filterObjects.js"></script>
 </body>
 
 </html>
